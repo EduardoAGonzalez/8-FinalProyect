@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parcial Final</title>
+  <script type="module" src="./src/app.js"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+  <div id="content">
+    <div class = titulo>
+      <h1>Presentacion Parcial Compugrafica</h1>
+    </div>
+    <div class="btnOption small">
+      <div class="title">Entrar</div>
+    </div>
+  
+  </div>
+  <video id="video" autoplay muted loop webkit-playsinline style="display:none"></video>
+  <video id="video2" autoplay muted loop webkit-playsinline style="display:none"></video>
+  <video id="video3" autoplay muted loop webkit-playsinline style="display:none"></video>
+  <video id="video4" autoplay loop webkit-playsinline style="display:none"></video>
+  <video id="ambiente" autoplay muted loop webkit-playsinline style="display:none"></video>
+
+  <script type="module">
+  import { main } from './src/app.js';
+
+  const options = document.querySelectorAll('.btnOption');
+
+
+  options.forEach(optionSelected => {
+      optionSelected.onclick = function(){
+        toogleContent();  
+        main();
+      }
+    });
+
+
+    function toogleContent (){
+      content.style.display = content.style.display == 'none' ? 'flex' : 'none';
+    }
+</script>
+
+</body>
+
+</html>
